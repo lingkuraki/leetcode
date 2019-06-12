@@ -11,6 +11,7 @@ public class NoRepeatCharacter {
     public int lengthOfLongestSubstring(String s) {
         int length = s.length();
         Set<Character> set = new HashSet<>();
+        // try to extend the range [i, j]
         int ans = 0, i = 0, j = 0;
         while (i < length && j < length) {
             if (!set.contains(s.charAt(j))) {
