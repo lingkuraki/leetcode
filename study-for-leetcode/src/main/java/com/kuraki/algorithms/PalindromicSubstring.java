@@ -1,5 +1,8 @@
 package com.kuraki.algorithms;
 
+/**
+ * 给定一个字符串 s，找到 s 中最长的回文子串。
+ */
 public class PalindromicSubstring {
 
     public String longestPalindrome(String s) {
