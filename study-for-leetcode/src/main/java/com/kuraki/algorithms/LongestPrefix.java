@@ -2,10 +2,6 @@ package com.kuraki.algorithms;
 
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-
 /**
  * 编写一个函数来查找字符串数组中的最长公共前缀。
  * <p>
