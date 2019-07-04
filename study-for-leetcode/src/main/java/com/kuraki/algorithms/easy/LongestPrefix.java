@@ -1,4 +1,4 @@
-package com.kuraki.algorithms;
+package com.kuraki.algorithms.easy;
 
 import org.junit.Test;
 
@@ -32,7 +32,7 @@ public class LongestPrefix {
         // 获取前缀
         String prefix = s1.substring(0, i);
         for (int j = 2; j < strs.length; j++) {
-            // 如果减为0，贼说明没有公共前缀，返回""
+            // 如果减为0，则说明没有公共前缀，返回""
             if (i == 0) {
                 return "";
             }

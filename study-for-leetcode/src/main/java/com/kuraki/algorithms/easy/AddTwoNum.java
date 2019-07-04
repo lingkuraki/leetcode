@@ -1,4 +1,4 @@
-package com.kuraki.algorithms;
+package com.kuraki.algorithms.easy;
 
 /**
  * 给出两个非空的链表用来表示两个非负的整数。其中，它们各自的位数是按照<s>逆序</s>的方式存储的，并且它们的每个节点只能存储一位数字。

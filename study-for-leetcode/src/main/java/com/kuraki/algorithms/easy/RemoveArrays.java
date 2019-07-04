@@ -1,4 +1,4 @@
-package com.kuraki.algorithms;
+package com.kuraki.algorithms.easy;
 
 public class RemoveArrays {
 
