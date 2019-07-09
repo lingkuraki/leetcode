@@ -10,6 +10,7 @@ public class Sqrt {
         return (int) Math.sqrt(x * 1.0);
     }
 
+    // 官方标准答案
     public int mySqrt1(int x) {
         if (x == 0) {
             return 0;

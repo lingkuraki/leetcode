@@ -1,9 +1,6 @@
-package com.kuraki.algorithms.easy;
+package com.kuraki.algorithms.hard;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
 
 /**
  * 给定两个大小为 m 和 n 的有序数组 nums1 和 nums2。
@@ -14,22 +11,15 @@ public class MedianSortedArrays {
 
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         double median;
-        List<Integer> list = new ArrayList<>();
-        if (isEmptyArr(nums1)) {
-            Arrays.stream(nums1).forEach(list::add);
-        }
-        if (isEmptyArr(nums2)) {
-            Arrays.stream(nums2).forEach(list::add);
-        }
+        int[] arr = new int[nums1.length + nums2.length];
+        System.arraycopy(nums1, 0, arr, 0, nums1.length);
+        System.arraycopy(nums2, 0, arr, nums1.length, nums2.length);
+        System.out.println(Arrays.toString(arr));
+        Arrays.sort(arr);
+        int length = arr.length;
+        median = length % 2 == 0 ? (double) (arr[length / 2] + arr[length / 2 - 1]) / 2 : arr[length / 2];
 
-        Collections.sort(list);
-        int size = list.size();
-        median = size % 2 != 0 ? list.get(size / 2) : (double) (list.get(size / 2) + list.get(size / 2 - 1)) / 2;
         return median;
-    }
-
-    private static boolean isEmptyArr(int[] nums) {
-        return nums != null && nums.length != 0;
     }
 
     public static void main(String[] args) {
