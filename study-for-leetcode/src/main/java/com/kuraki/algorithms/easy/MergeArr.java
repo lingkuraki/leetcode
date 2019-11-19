@@ -15,10 +15,14 @@ import java.util.Arrays;
  * nums2 = [2,5,6],       n = 3
  * <p>
  * 输出: [1,2,2,3,5,6]
+ *
+ * @author kuraki
  */
 public class MergeArr {
 
-    // 使用java自身的api
+    /**
+     * 使用java自身的api
+     */
     public void merge(int[] nums1, int m, int[] nums2, int n) {
         // 先合并
         System.arraycopy(nums2, 0, nums1, m, n);
@@ -26,7 +30,24 @@ public class MergeArr {
         Arrays.sort(nums1);
     }
 
-    public void merge1(int[] nums1, int m, int[] nums2, int n) {
+    public void merge2(int[] nums1, int m, int[] nums2, int n) {
+        int[] copyNums1 = new int[m];
+        System.arraycopy(nums1, 0, copyNums1, 0, m);
+        int p1 = 0;
+        int p2 = 0;
+        int p = 0;
+        while ((p1 < m) && (p2 < n)) {
+            nums1[p++] = copyNums1[p1] < nums2[p2] ? copyNums1[p1++] : nums2[p2++];
+        }
+        if (p1 < m) {
+            System.arraycopy(copyNums1, p1, nums1, p1 + p2, n + m - p1 - p2);
+        }
+        if (p2 < n) {
+            System.arraycopy(nums2, p2, nums1, p1 + p2, n + m - p1 - p2);
+        }
+    }
+
+    private static void merge1(int[] nums1, int m, int[] nums2, int n) {
         // two get pointers for nums1 and nums2
         int p1 = m - 1;
         int p2 = n - 1;
@@ -42,5 +63,4 @@ public class MergeArr {
         // add missing elements from nums2
         System.arraycopy(nums2, 0, nums1, 0, p2 + 1);
     }
-
 }
