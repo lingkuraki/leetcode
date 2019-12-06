@@ -76,6 +76,6 @@ public class WordSegmentation {
     public static void main(String[] args) {
         WordSegmentation word = new WordSegmentation();
         String[] arr = {"cat", "cats", "and", "sand", "dog"};
-        System.out.println(word.wordBreakByDynamic("catsanddogg", Arrays.asList(arr)));
+        System.out.println(word.wordBreakByPriority("catsanddog", Arrays.asList(arr)));
     }
 }
