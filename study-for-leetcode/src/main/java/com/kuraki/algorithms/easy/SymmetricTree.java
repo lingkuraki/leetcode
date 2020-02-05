@@ -1,5 +1,7 @@
 package com.kuraki.algorithms.easy;
 
+import com.kuraki.algorithms.common.TreeNode;
+
 public class SymmetricTree {
 
     public boolean isSymmetric(TreeNode root) {

@@ -1,5 +1,7 @@
 package com.kuraki.algorithms.easy;
 
+import com.kuraki.algorithms.common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
