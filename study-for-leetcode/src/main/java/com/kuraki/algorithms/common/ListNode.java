@@ -1,10 +1,13 @@
-package com.kuraki.algorithms.easy;
+package com.kuraki.algorithms.common;
 
+/**
+ * @author 凌波
+ */
 public class ListNode {
-    int val;
-    ListNode next;
+    public int val;
+    public ListNode next;
 
-    ListNode(int x) {
+    public ListNode(int x) {
         val = x;
     }
 
